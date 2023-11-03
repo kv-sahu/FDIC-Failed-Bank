@@ -1,0 +1,123 @@
+{
+  "config": "{\"version\":\"5.48\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2},\"customTheme\":{\"name\":\"kv7759582020052174.json\",\"version\":\"5.48\",\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSectione51620e56b809b184571",
+      "config": "{}",
+      "name": "Pod",
+      "parameters": "[{\"name\":\"Param_Filter35923dc0e72a5bb1719b\",\"boundFilter\":\"Filter35923dc0e72a5bb1719b\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Failed Banks\"}},\"Property\":\"State \"}}}]",
+      "type": 2
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "kv7759582020052174.json",
+            "path": "kv7759582020052174.json",
+            "type": 201
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"url\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#64B3D5'\"}}}}}}}]}}",
+      "displayName": "Report Summary",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2b1c5c22e714a72c4e90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":726.2472885032539,\"y\":134.31670281995662,\"z\":1000,\"width\":535.7049891540131,\"height\":262.38611713665944,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Calendar.Month\",\"active\":true}],\"Y\":[{\"queryRef\":\"Failed Banks.Total Banks\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendar\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Month\"},\"Name\":\"Calendar.Month\",\"NativeReferenceName\":\"Month\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"},\"Name\":\"Failed Banks.Total Banks\",\"NativeReferenceName\":\"Total Banks\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'InsideEnd'\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 262.39,
+          "width": 535.71,
+          "x": 726.25,
+          "y": 134.32,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6e3dd91103cda2b6952d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":240.52060737527117,\"z\":3000,\"width\":174.9240780911063,\"height\":49.978308026030376,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pageNavigator\",\"drillFilterOtherVisuals\":true},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 49.98,
+          "width": 174.92,
+          "x": 0.00,
+          "y": 240.52,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"90dd11126bb280e0e0e2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":193.6659436008677,\"y\":134.31670281995662,\"z\":0,\"width\":512.2776572668113,\"height\":523.2104121475055,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Failed Banks.State \",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Failed Banks.Bank Name )\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"State \"},\"Name\":\"Failed Banks.State \",\"NativeReferenceName\":\"State \"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bank Name\"}},\"Function\":2},\"Name\":\"CountNonNull(Failed Banks.Bank Name )\",\"NativeReferenceName\":\"Total Banks\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Bank Name\"}},\"Function\":2}}}]},\"columnProperties\":{\"CountNonNull(Failed Banks.Bank Name )\":{\"displayName\":\"Total Banks\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'InsideEnd'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Arial'\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 523.21,
+          "width": 512.28,
+          "x": 193.67,
+          "y": 134.32,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b7325928509aa01b069d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":488.5245901639344,\"y\":31.147540983606557,\"z\":2000,\"width\":536.0655737704918,\"height\":86.88524590163935,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Report Summary\",\"textStyle\":{\"fontSize\":\"36pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 86.89,
+          "width": 536.07,
+          "x": 488.52,
+          "y": 31.15,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"type\":1}",
+      "displayName": "ToolTip",
+      "displayOption": 3,
+      "filters": "[{\"name\":\"Filter35923dc0e72a5bb1719b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Failed Banks\"}},\"Property\":\"State \"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 240.00,
+      "name": "ReportSectione51620e56b809b184571",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"74eca62dd5b003860305\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":51,\"z\":0,\"width\":126,\"height\":99,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Failed Banks.Total Banks\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"},\"Name\":\"Failed Banks.Total Banks\",\"NativeReferenceName\":\"Total Banks\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Calibri'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 99.00,
+          "width": 126.00,
+          "x": 0.00,
+          "y": 51.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e1c201468dd4b09d4e23\",\"layouts\":[{\"id\":0,\"position\":{\"x\":160,\"y\":25.5,\"width\":150,\"height\":150,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"Failed Banks.City State\",\"active\":true}],\"Size\":[{\"queryRef\":\"Failed Banks.Total Banks\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"City State\"},\"Name\":\"Failed Banks.City State\",\"NativeReferenceName\":\"City State\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"},\"Name\":\"Failed Banks.Total Banks\",\"NativeReferenceName\":\"Total Banks\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 150.00,
+          "width": 150.00,
+          "x": 160.00,
+          "y": 25.50,
+          "z": 1000.00
+        }
+      ],
+      "width": 320.00
+    }
+  ],
+  "theme": "kv7759582020052174.json"
+}

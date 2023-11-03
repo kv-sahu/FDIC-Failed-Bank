@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../FDIC Failed Bank Report.Dataset"
+    },
+    "byConnection": null
+  }
+}
